@@ -5,7 +5,6 @@ for (i = array.length; i > 0; i--) {
     newArray[i] = array[index];
 };
 console.log('[' + array + ']' + ' ' + '->' + ' ' + newArray);
-
 let string = ('salomon');
 let newString = [], indexString;
 for (i = string.length; i > 0; i--) {
@@ -13,13 +12,11 @@ for (i = string.length; i > 0; i--) {
     newString[i] = string[indexString];
 };
 console.log('[' + string + ']' + ' ' + '->' + ' ' + 'revers:' + newString);
-
 min = array[0];
 for (i = 0; i < array.length; i++) {   
     if (array[i] < min) min = array[i];
 };
 console.log('[' + array + ']' + ' ' + '->' + ' ' + 'min:' + min);
-
 let longString = ['abs','salomon','ok',];  
 let line = '';
 let long;
@@ -31,12 +28,7 @@ for (let i = 0; i < longString.length; i++) {
 };  
 console.log('[' + longString + ']' + ' ' + '->' + ' ' + 'long:' + long);  
 
-let a3 = [2, "hello", 3, "hi", 4, "Mazai"];
-let a3_res = [];
-a3.forEach(function(elem) {
-  if(typeof elem == "number") a3_res.push(elem);
-});
-console.log(a3_res);
+
 
   
   
