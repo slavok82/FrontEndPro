@@ -1,34 +1,60 @@
-let array = new Array(11,22,3,4,5,6,7,8,9,10,'ok');
-let newArray = [], index;
-for (i = array.length; i > 0; i--) {
-    index = array.length - i;
-    newArray[i] = array[index];
-};
-console.log('[' + array + ']' + ' ' + '->' + ' ' + newArray);
-let string = ('salomon');
-let newString = [], indexString;
-for (i = string.length; i > 0; i--) {
-    indexString = string.length - i;
-    newString[i] = string[indexString];
-};
-console.log('[' + string + ']' + ' ' + '->' + ' ' + 'revers:' + newString);
-min = array[0];
-for (i = 0; i < array.length; i++) {   
-    if (array[i] < min) min = array[i];
-};
-console.log('[' + array + ']' + ' ' + '->' + ' ' + 'min:' + min);
-let longString = ['abs','salomon','ok',];  
+/*enter data into the array*/
+let array = [1,1,5,8];
+let i;
+let result = [];
+let min = Infinity;
+let sum = 0;
+let averageValue;
 let line = '';
-let long;
-for (let i = 0; i < longString.length; i++) {
-    if (longString[i].length > line) {
-      line = longString[i].length;
-      long = longString[i];
+const utils = {
+    reverse: function(array) {   
+        for (i = array.length - 1; i >= 0; i--) {
+            result.push(array[i]);
+        }    
+        return result;
+    }, 
+    verifyNumbers: function(array) {
+        for (i = 0; i < array.length; i ++) {
+            if (typeof array[i] === 'number') {
+               result.push(array[i]);
+            }
+        }
+        return result;
+    },
+    getMin: function(array) {
+        for (i = 0; i < array.length; i++) {   
+            if (array[i] < min) {
+                min = array[i];                
+            }             
+        }        
+        return min;
+    },
+    getAverage: function(array) {
+        for (i = 0; i < array.length; i++) {
+            sum += array[i];
+            averageValue = sum / array.length;
+        }      
+        return averageValue;
+    },
+    getMaxString: function(array) {
+        for (i = 0; i < array.length; i++) {
+            if (array[i].length > line.length) {
+              line = array[i];              
+            }
+        }
+        return line;
     }
-};  
-console.log('[' + longString + ']' + ' ' + '->' + ' ' + 'long:' + long);  
+};
+/*Activate the one you need "console.log"*/
+utils.reverse([]);
+//console.log('[' + array + ']' + ' ' + '->' + ' ' + utils.reverse(array));
+utils.verifyNumbers([]);
+//console.log('[' + array + ']' + ' ' + '->' + ' ' + utils.verifyNumbers(array));
+utils.getMin([]);
+//console.log('[' + array + ']' + ' ' + '->' + ' ' + utils.getMin(array));
+utils.getAverage([]);
+//console.log('[' + array + ']' + ' ' + '->' + ' ' + utils.getAverage(array));
+utils.getMaxString([]);
+//console.log('[' + array + ']' + ' ' + '->' + ' ' + utils.getMaxString(array));
 
 
-
-  
-  
